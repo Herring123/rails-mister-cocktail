@@ -1,9 +1,9 @@
-<h1><%= @cocktail.name %></h1>
 
+<h1 class="n"><%= @cocktail.name %></h1>
 
+<div class="ingredients">
 <h4>Ingredients:</h4>
-<%#= @ingredient.name %>
-<%#= @dose.description %>
+
 <ul>
 
 <%@cocktail.doses.each do |d|%>
@@ -19,18 +19,16 @@
 </li>
 <% end %>
 </ul>
-
-
-
-
+</div>
 <br>
 <br>
-
-
-<%= link_to "Add a Dose", new_cocktail_dose_path(@cocktail), class: "btn btn-primary" %>
+<div class="b">
+<%= link_to "Add a Dose", new_cocktail_dose_path(@cocktail), class: "btn btn-primary"  %>
+</div>
 <br>
 <br>
+<div class="b">
 <%= link_to "Back to Cocktails", cocktails_path, class: "btn btn-primary" %>
-
+</div>
 
 
